@@ -38,7 +38,7 @@
                                     <button class="btn btn-sm btn-danger">Eliminar</button>
                                 </div>
                                 <div class="dropdown-menu" aria-labelledby="dropdownEliminar">
-                                    <p class="text-muted pl-1 pr-1 mt-2 mb-1 text-center mensaje-eliminar">¿Desea eliminar este aprendiz?</p>
+                                    <p class="text-muted pl-1 pr-1 mt-2 mb-1 text-center mensaje-eliminar">¿Desea eliminar este Articulo?</p>
                                     <form action="{{ route('article.destroy', $article->id) }}" method="POST" class="d-block form-destroy dropdown-item">
                                         @method('delete')
                                         @csrf
