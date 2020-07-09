@@ -10,6 +10,8 @@
                 <div class="card-body">
                     <form action="{{ route('sucursal.update', $sucursal->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
+                    {{ method_field('PUT') }}
+
                                <div class="form-row">
                                    <div class="col">
                                        <div class="form-group">
