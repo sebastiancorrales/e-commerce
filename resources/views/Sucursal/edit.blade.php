@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-8">
             <div class="card">
-                <div class="card-header bg-warning text-center"><h3>Actualizar pedido</h3></div>
+                <div class="card-header bg-warning text-center"><h3>Actualizar sucursal</h3></div>
                 <div class="card-body">
                     <form action="{{ route('sucursal.update', $sucursal->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf

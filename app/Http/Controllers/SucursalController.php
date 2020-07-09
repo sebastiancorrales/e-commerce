@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SucursalRequest;
 use App\Sucursal;
 use Illuminate\Http\Request;
 
@@ -34,7 +35,7 @@ class SucursalController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SucursalRequest $request)
     {
         $Sucursal = new Sucursal();
         $Sucursal->direccion = $request->get('direccion');
@@ -78,7 +79,7 @@ class SucursalController extends Controller
      * @param  \App\Sucursal  $sucursal
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $sucursal)
+    public function update(SucursalRequest $request, $sucursal)
     {
         $sucursal = Sucursal::findOrFail($sucursal);
 
