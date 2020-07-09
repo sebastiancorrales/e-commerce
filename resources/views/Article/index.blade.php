@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="row">
-    <div class="col">
+        <div class="col">
             <table class="table">
                 <thead class="thead-light">
                     <tr>
@@ -22,7 +22,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($articles as $article)
+                    @foreach($articles ?? '' as $article)
                     <tr>
                         <th scope="row">{{$article->id}}</th>
                         <td>{{$article->nombre_persona}}</td>
@@ -31,9 +31,21 @@
                         <td>{{$article->valor_envio}}</td>
                         <td>{{$article->estado}}</td>
                         <td>
-                            <a href="">Editar</a>/
+                            <a href="{{route('article.edit', $article->id)}}">Editar</a>/
                             <a href="{{route('article.show', $article->id)}}">Mas info</a>/
-                            <a href="{{route('article.destroy', $article->id)}}">Eliminar</a>
+                            <div class="dropdown btn-circle">
+                                <div class="" id="dropdownEliminar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button class="btn btn-sm btn-danger">Eliminar</button>
+                                </div>
+                                <div class="dropdown-menu" aria-labelledby="dropdownEliminar">
+                                    <p class="text-muted pl-1 pr-1 mt-2 mb-1 text-center mensaje-eliminar">¿Desea eliminar este aprendiz?</p>
+                                    <form action="{{ route('article.destroy', $article->id) }}" method="POST" class="d-block form-destroy dropdown-item">
+                                        @method('delete')
+                                        @csrf
+
+                                        <button type="submit" class="btn btn-danger d-block w-100">Confirmar</button>
+                                    </form>
+                                </div>
                         </td>
                     </tr>
                     @endforeach

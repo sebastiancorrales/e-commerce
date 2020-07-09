@@ -50,7 +50,7 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="valor_envio">Valor envio</label>
-                                <input type="number" class="form-control" placeholder="$5000" id="valor_envio" name="valor_evio">
+                                <input type="number" class="form-control" placeholder="$5000" id="valor_envio" name="valor_envio">
                             </div>
                         </div>
                         <div class="col">

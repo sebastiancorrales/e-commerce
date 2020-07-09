@@ -53,7 +53,8 @@ class ArticleController extends Controller
         $article->sucursal = $request->get('sucursal');
         $article->save();
 
-        return view('Article.index');
+        return back();
+        
         
     }
 
@@ -75,9 +76,11 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function edit(Article $article)
+    public function edit($article)
     {
-        return view('Article.edit');
+        $article = Article::findOrFail($article);
+
+        return view('Article.edit', compact('article'));
         
     }
 
@@ -88,9 +91,26 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article)
+    public function update(ArticleRequest $request, $article)
     {
-        //
+        $article = Article::findOrFail($article);
+
+        $article->categoria = $request->get('categoria');
+        $article->nombre_persona = $request->get('nombre_persona');
+        $article->nombre_articulo = $request->get('nombre_articulo');
+        $article->descripcion = $request->get('descripcion');
+        $article->valor_envio = $request->get('valor_envio');
+        $article->fecha_entrega = $request->get('fecha_entrega');
+        $article->telefono = $request->get('telefono');
+        $article->email = $request->get('email');
+        $article->direccion_destino = $request->get('direccion_destino');
+        $article->estado = $request->get('estado');
+        $article->sucursal = $request->get('sucursal');
+        $article->save();
+
+        return redirect('/article');
+       
+
     }
 
     /**
@@ -99,8 +119,10 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $article)
+    public function destroy($id)
     {
-        //
+        Article::destroy($id);
+        return redirect()->back()
+            ->with('status', "El aprendiz ha sido eliminado con éxito.");
     }
 }

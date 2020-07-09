@@ -29,7 +29,7 @@ class ArticleRequest extends FormRequest
             'nombre_persona'   => 'max:191',
             'nombre_articulo'  => 'required|string|max:191',
             'descripcion'      => 'required|string|max:191',
-            'valor_envio'      => 'required|number',
+            'valor_envio'      => 'required|numeric',
             'fecha_entrega'    => 'required|date|date_format:Y-m-d',
             'telefono'         => 'required|string|max:10',
             'email'            => 'required|email',
