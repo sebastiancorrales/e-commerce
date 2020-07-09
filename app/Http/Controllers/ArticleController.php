@@ -14,7 +14,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return view('Article.index');
+        $articles  = Article::all();
+        return view('Article.index', compact('articles'));
     }
 
     /**
@@ -45,9 +46,10 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function show(Article $article)
+    public function show($article)
     {
-        //
+        $article = Article::findOrFail($article);
+        return view('Article.detail', compact('article'));
     }
 
     /**

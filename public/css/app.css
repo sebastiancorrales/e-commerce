@@ -10928,3 +10928,21 @@ a.text-dark:focus {
   }
 }
 
+.card-dash {
+  background: linear-gradient(180deg, #0073B7, #08A0FA);
+  border-radius: 5px;
+  box-shadow: -2px 3px 2px -3px rgba(0, 0, 0, 0.75);
+}
+
+.card-dash .card-body {
+  color: white;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.card-dash:hover {
+  background: linear-gradient(180deg, #066297, #106ba0);
+  transform: scale(1.05);
+  transition: 0.1s;
+}
+

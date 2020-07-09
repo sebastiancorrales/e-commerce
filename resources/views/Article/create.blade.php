@@ -1,14 +1,14 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-
-    <div class="row">
-        <div class="col-8">
-            <div class="card">
-                <div class="card-header bg-warning text-center"><h3>Realizar pedido</h3></div>
-                <div class="card-body">
-                    <form>
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <form>
                         <div class="form-row">
                             <div class="col">
                                 <div class="form-group">
@@ -92,15 +92,12 @@
                         </div>
 
                       </form>
-                </div>
+                
             </div>
-
-
-
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
         </div>
     </div>
-
-
-
 </div>
-@endsection

@@ -1,12 +1,8 @@
-@extends('layouts.app')
-
-@section('content')
 <div class="container">
 
     <div class="row">
         <div class="col-8">
             <div class="card">
-                <div class="card-header bg-warning text-center"><h3>Realizar pedido</h3></div>
                 <div class="card-body">
                     <form>
 
@@ -51,7 +47,7 @@
                             </div>
                         </div>
 
-                      </form>
+                    </form>
                 </div>
             </div>
 
@@ -63,4 +59,3 @@
 
 
 </div>
-@endsection

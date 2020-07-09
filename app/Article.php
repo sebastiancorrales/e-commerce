@@ -8,13 +8,15 @@ class Article extends Model
 {
     protected $fillable = [
         'categoria',
-        'nombre', 
+        'nombre_persona', 
+        'nombre_articulo', 
         'descripcion',
-        'precio',
         'valor_envio',
-        'fecha_envio',
-        'direccion_envio',
+        'fecha_entrega',
         'direccion_destino',
+        'telefono',
+        'email',
+        'estado',
         'sucursal'
     ];
     public function sucursal(){
