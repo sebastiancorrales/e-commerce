@@ -106,35 +106,10 @@
                         </div>
                     </div>
 
-
-
-<<<<<<< HEAD
-
-
-
-
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary">Guardar</button>
-=======
-                        <div class="row justify-content-center p-4">
-
-                            <div class="col-6">
-                                <button type="submit" class="btn btn-success btn-block ">Enviar</button>
-                            </div>
-                        </div>
-                      </form>
-                      <div class="modal-footer">
-                        {{-- <div class="col-4">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                        <div class="col-6">
-                            <button type="submit" class="btn btn-success btn-block ">Enviar</button>
-                        </div> --}}
-                      </div>
-
->>>>>>> 3e6a14bb0cf4921ca93d604a449e25314923931f
             </div>
             </form>
         </div>
