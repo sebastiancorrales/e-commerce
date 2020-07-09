@@ -36,7 +36,14 @@ class SucursalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $Sucursal = new Sucursal();
+        $Sucursal->direccion = $request->get('direccion');
+        $Sucursal->nombre = $request->get('nombre');
+        $Sucursal->telefono = $request->get('telefono');
+        $Sucursal->horarios = $request->get('horarios');
+        $Sucursal->save();
+
+        return back();
     }
 
     /**
@@ -45,7 +52,7 @@ class SucursalController extends Controller
      * @param  \App\Sucursal  $sucursal
      * @return \Illuminate\Http\Response
      */
-    public function show(Sucursal $sucursal)
+    public function show($sucursal)
     {
         $sucursal = Sucursal::findOrFail($sucursal);
         return view('Sucursal.detail', compact('sucursal'));
@@ -57,9 +64,11 @@ class SucursalController extends Controller
      * @param  \App\Sucursal  $sucursal
      * @return \Illuminate\Http\Response
      */
-    public function edit(Sucursal $sucursal)
+    public function edit($sucursal)
     {
-        return view('Sucursal.edit');
+        $sucursal = Sucursal::findOrFail($sucursal);
+
+        return view('Sucursal.edit', compact('sucursal'));
     }
 
     /**
@@ -69,9 +78,17 @@ class SucursalController extends Controller
      * @param  \App\Sucursal  $sucursal
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Sucursal $sucursal)
+    public function update(Request $request, $sucursal)
     {
-        //
+        $sucursal = Sucursal::findOrFail($sucursal);
+
+        $sucursal->direccion = $request->get('direccion');
+        $sucursal->nombre = $request->get('nombre');
+        $sucursal->telefono = $request->get('telefono');
+        $sucursal->horarios = $request->get('horarios');
+        $sucursal->save();
+
+        return redirect('/sucursal');
     }
 
     /**
@@ -80,8 +97,10 @@ class SucursalController extends Controller
      * @param  \App\Sucursal  $sucursal
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sucursal $sucursal)
+    public function destroy($id)
     {
-        //
+        Sucursal::destroy($id);
+        return redirect()->back()
+            ->with('status', "La sucursal ha sido eliminado con éxito.");
     }
 }

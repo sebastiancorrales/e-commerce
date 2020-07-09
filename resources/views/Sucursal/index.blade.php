@@ -29,9 +29,21 @@
                         <td>{{$sucursal->telefono}}</td>
                         <td>{{$sucursal->horarios}}</td>
                         <td>
-                            <button class=" btn btn-sm bg-primary" href=""><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                            {{-- <a href="{{route('Sucursal.show', $sucursal->id)}}">Mas info</a> --}}
-                            {{-- {{-- <a href="{{route('Sucursal.destroy', $sucursal->id)}}">Eliminar</a> --}}
+                            <a class="btn btn-primary btn-sm" href="{{route('sucursal.edit', $sucursal->id)}}"><i class="fa fa-pencil-square-o"></i></a>
+                            <a class="btn btn-success btn-sm" href="{{route('sucursal.show', $sucursal->id)}}"><i class="fa fa-eye"></i></a>
+                            <div class="dropdown btn-circle">
+                                <div class="" id="dropdownEliminar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <button class="btn btn-sm btn-danger"><i class="fa fa-trash-o"></i></button>
+                                </div>
+                                <div class="dropdown-menu" aria-labelledby="dropdownEliminar">
+                                    <p class="text-muted pl-1 pr-1 mt-2 mb-1 text-center mensaje-eliminar">¿Desea eliminar este Articulo?</p>
+                                    <form action="{{ route('sucursal.destroy', $sucursal->id) }}" method="POST" class="d-block form-destroy dropdown-item">
+                                        @method('delete')
+                                        @csrf
+
+                                        <button type="submit" class="btn btn-danger d-block w-100">Confirmar</button>
+                                    </form>
+                                </div>
                         </td>
                     </tr>
                     @endforeach

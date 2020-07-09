@@ -17,7 +17,7 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="categoria">Categoria</label>
-                                <select name="categoria" id="categoria">
+                                <select class="form-control" name="categoria" id="categoria" value="{{$article->categoria}}">
                                     <option value="juguetes">Juguetes</option>
                                     <option value="juguetes">Juguetes</option>
                                     <option value="juguetes">Juguetes</option>
@@ -89,8 +89,8 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="estado">Estado</label>
-                                <select name="estado" id="estado" default="{{$article->estado}}">
-                                    
+                                <select class="form-control" name="estado" id="estado" default="{{$article->estado}}">
+
                                     <option value="En bodega">En bodega</option>
                                     <option value="En camino">En Camino</option>
                                     <option value="Entregado">Entregado</option>
@@ -102,7 +102,7 @@
                     <div class="form-row">
                         <div class="col">
                             <label for="sucursal">Sucursal</label>
-                            <select name="sucursal" id="sucursal" default="{{$article->sucursal}}">
+                            <select class="form-control" name="sucursal" id="sucursal" default="{{$article->sucursal}}">
                                 <option value="En bodega">El cable</option>
                                 <option value="En camino">Pereira</option>
                                 <option value="Entregado">calir</option>

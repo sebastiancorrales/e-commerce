@@ -27,7 +27,7 @@ class ArticleController extends Controller
     public function create()
     {
         return view('Article.create');
-    
+
     }
 
     /**
@@ -54,8 +54,8 @@ class ArticleController extends Controller
         $article->save();
 
         return back();
-        
-        
+
+
     }
 
     /**
@@ -81,7 +81,7 @@ class ArticleController extends Controller
         $article = Article::findOrFail($article);
 
         return view('Article.edit', compact('article'));
-        
+
     }
 
     /**
@@ -109,7 +109,7 @@ class ArticleController extends Controller
         $article->save();
 
         return redirect('/article');
-       
+
 
     }
 
@@ -123,6 +123,6 @@ class ArticleController extends Controller
     {
         Article::destroy($id);
         return redirect()->back()
-            ->with('status', "El aprendiz ha sido eliminado con éxito.");
+            ->with('status', "El articulo ha sido eliminado con éxito.");
     }
 }

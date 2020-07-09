@@ -8,8 +8,8 @@
                 </button>
             </div>
             <div class="modal-body">
-                    <form>
-
+                <form action="{{ route('sucursal.store') }}" method="POST" enctype="multipart/form-data">
+                 @csrf
                         <div class="form-row">
                             <div class="col">
                                 <div class="form-group">
@@ -19,8 +19,8 @@
                             </div>
                             <div class="col">
                                 <div class="form-group">
-                                    <label for="destinatario">Nombre</label>
-                                    <input type="text" class="form-control" id="destinatario" name="destinatario">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre">
                                 </div>
                             </div>
                         </div>
@@ -34,32 +34,20 @@
                             </div>
                             <div class="col">
                                 <div class="form-group">
-                                    <label for="destinatario">Horarios</label>
-                                    <input type="text" class="form-control" id="destinatario" name="destinatario">
+                                    <label for="horarios">Horarios</label>
+                                    <input type="text" class="form-control" id="horarios" name="horarios">
                                 </div>
                             </div>
                         </div>
 
-
-
-
-
-
-                        <div class="row justify-content-center p-4">
-                            <div class="col-6">
-                                <button type="submit" class="btn btn-success btn-block ">Enviar</button>
-                            </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
                         </div>
 
                     </form>
-                    <div class="modal-footer">
-                        {{-- <div class="col-4">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                        <div class="col-6">
-                            <button type="submit" class="btn btn-success btn-block ">Enviar</button>
-                        </div> --}}
-                      </div>
+
+
 
             </div>
         </div>

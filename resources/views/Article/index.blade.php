@@ -31,11 +31,11 @@
                         <td>{{$article->valor_envio}}</td>
                         <td>{{$article->estado}}</td>
                         <td>
-                            <a href="{{route('article.edit', $article->id)}}">Editar</a>/
-                            <a href="{{route('article.show', $article->id)}}">Mas info</a>/
+                            <a class="btn btn-primary btn-sm" href="{{route('article.edit', $article->id)}}"><i class="fa fa-pencil-square-o"></i></a>
+                            <a class="btn btn-success btn-sm" href="{{route('article.show', $article->id)}}"><i class="fa fa-eye"></i></a>
                             <div class="dropdown btn-circle">
                                 <div class="" id="dropdownEliminar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <button class="btn btn-sm btn-danger">Eliminar</button>
+                                    <button class="btn btn-sm btn-danger"><i class="fa fa-trash-o"></i></button>
                                 </div>
                                 <div class="dropdown-menu" aria-labelledby="dropdownEliminar">
                                     <p class="text-muted pl-1 pr-1 mt-2 mb-1 text-center mensaje-eliminar">¿Desea eliminar este Articulo?</p>
