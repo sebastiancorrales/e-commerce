@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#exampleModalLong"><i class="fa fa-plus-circle" aria-hidden="true"></i> Pedido</button>
+            <button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#exampleModalLong"><i class="fa fa-plus-circle" aria-hidden="true"></i> Envio</button>
         </div>
     </div>
     <div class="row">
