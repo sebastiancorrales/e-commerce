@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-edicatr
+index
 @endsection

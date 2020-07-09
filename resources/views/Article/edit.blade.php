@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-8">
             <div class="card">
-                <div class="card-header bg-warning text-center"><h3>Realizar pedido</h3></div>
+                <div class="card-header bg-warning text-center"><h3>Actualizar pedido</h3></div>
                 <div class="card-body">
                     <form>
                         <div class="form-row">
@@ -87,7 +87,7 @@
 
                         <div class="row justify-content-center p-4">
                             <div class="col-6">
-                                <button type="submit" class="btn btn-success btn-block ">Enviar</button>
+                                <button type="submit" class="btn btn-success btn-block ">Actualizar</button>
                             </div>
                         </div>
 
