@@ -14,7 +14,8 @@ class SucursalController extends Controller
      */
     public function index()
     {
-        //
+        $sucursales = Sucursal::all();
+        return view('Sucursal.index', compact('sucursales'));
     }
 
     /**
@@ -24,7 +25,7 @@ class SucursalController extends Controller
      */
     public function create()
     {
-        //
+        return view('Sucursal.create');
     }
 
     /**
@@ -46,7 +47,8 @@ class SucursalController extends Controller
      */
     public function show(Sucursal $sucursal)
     {
-        //
+        $sucursal = Sucursal::findOrFail($sucursal);
+        return view('Sucursal.detail', compact('sucursal'));
     }
 
     /**
@@ -57,7 +59,7 @@ class SucursalController extends Controller
      */
     public function edit(Sucursal $sucursal)
     {
-        //
+        return view('Sucursal.edit');
     }
 
     /**

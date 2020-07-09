@@ -1,9 +1,13 @@
-<div class="container">
-
-    <div class="row">
-        <div class="col-8">
-            <div class="card">
-                <div class="card-body">
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Realizar envio</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
                     <form>
 
                         <div class="form-row">
@@ -48,14 +52,16 @@
                         </div>
 
                     </form>
-                </div>
+                    <div class="modal-footer">
+                        {{-- <div class="col-4">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-success btn-block ">Enviar</button>
+                        </div> --}}
+                      </div>
+
             </div>
-
-
-
         </div>
     </div>
-
-
-
 </div>

@@ -12,7 +12,7 @@
             </a>
         </div>
         <div class="card-dash col-2 m-1" style="width: 18rem;">
-            <a href="{{route('article.index')}}">
+            <a href="{{route('sucursal.index')}}">
                 <div class="card-body">
                     <h3>Sucursales</h3>
                     <h6>Pedidos Pendientes: 5</h6>
