@@ -7,7 +7,7 @@
             <a href="{{route('article.index')}}">
                 <div class="card-body">
                     <h3>Pedidos</h3>
-                    <h6>Pedidos Pendientes: 5</h6>
+                    <h6>Total de pedidos {{$articles}}</h6>
                 </div>
             </a>
         </div>
@@ -15,7 +15,7 @@
             <a href="{{route('sucursal.index')}}">
                 <div class="card-body">
                     <h3>Sucursales</h3>
-                    <h6>Pedidos Pendientes: 5</h6>
+                    <h6>Sucursales: {{$sucursals}}</h6>
                 </div>
             </a>
         </div>

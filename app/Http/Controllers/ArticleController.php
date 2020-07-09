@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\Http\Requests\ArticleRequest;
+use App\Sucursal;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -16,7 +17,8 @@ class ArticleController extends Controller
     public function index()
     {
         $articles  = Article::all();
-        return view('Article.index', compact('articles'));
+        $sucursals = Sucursal::all();
+        return view('Article.index', compact( 'sucursals','articles'));
     }
 
     /**
@@ -79,8 +81,9 @@ class ArticleController extends Controller
     public function edit($article)
     {
         $article = Article::findOrFail($article);
-
-        return view('Article.edit', compact('article'));
+        $sucursals = Sucursal::all();
+        return view('Article.edit', compact('article', 'sucursals'));
+    
 
     }
 
